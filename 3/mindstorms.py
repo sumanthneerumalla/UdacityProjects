@@ -1,4 +1,5 @@
 import turtle
+import random
 
 def drawSquare():
     window = turtle.Screen()
@@ -8,17 +9,17 @@ def drawSquare():
     brad.shape("classic")
     brad.color("black")
     brad.speed(2)
-    while True:
-       
-        brad.forward(100)
-        brad.right(90)
-        brad.forward(100)
-        brad.right(90)
-        brad.forward(100)
-        brad.right(90)
-        brad.forward(100)
-        brad.right(90)
 
-    window.exitonclick()
+
+
+    while True :
+        distance = random.randint(20,100)
+        direction = random.randint(0,100)
+        brad.forward(distance)
+        brad.right(direction)
+
+
+
+
 
 drawSquare()
