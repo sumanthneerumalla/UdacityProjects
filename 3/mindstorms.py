@@ -31,4 +31,13 @@ def drawTurtles():
     desmond = turtleObjects()
     desmond.triangle()
 
+    #turtle makes a circle out of squares
+    speedy = turtleObjects()
+    speedy.speed(0)
+    for i in range (36):
+        speedy.square()
+        speedy.right(10)
+
+    window.exitonclick()
+
 drawTurtles()
