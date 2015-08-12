@@ -6,7 +6,6 @@ def drawScreen():
     window.bgcolor("red")
     window.exitonclick()
 
-def drawSquare():
     brad = turtle.Turtle()
     brad.shape("classic")
     brad.color("black")
@@ -18,22 +17,10 @@ def drawSquare():
 
 
 
-def drawCircle():
     angie = turtle.Turtle
     angie.shape("turtle")
     angie.color("white")
-    angie.setx(100)
-    angie.setx(100)
+
     angie.circle(100)
 
 drawScreen()
-drawSquare()
-drawCircle()
-
-
-
-
-
-
-
-drawSquare()
