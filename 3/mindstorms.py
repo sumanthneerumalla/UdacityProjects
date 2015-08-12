@@ -1,26 +1,34 @@
 import turtle
-import random
 
-def drawScreen():
+class turtleObjects(turtle.Turtle):
+    def square(self):
+        for i in range(4):
+            self.forward(100)
+            self.right(90)
+    def design(self, color = "black"):
+        self.color(color)
+        self.shape("turtle")
+    def triangle(self):
+        for i in range (3):
+            self.forward(100)
+            self.right(120)
+
+
+def drawTurtles():
     window = turtle.Screen()
-    window.bgcolor("red")
-    window.exitonclick()
+    #turtle makes a square
+    brad = turtleObjects()
+    brad.design()
+    brad.square()
 
-    brad = turtle.Turtle()
-    brad.shape("classic")
-    brad.color("black")
-    brad.speed(2)
+    #turtle makes a circle
 
-    for i in range(0,4):
-        brad.forward(100)
-        brad.right(90)
-
-
-
-    angie = turtle.Turtle
-    angie.shape("turtle")
-    angie.color("white")
-
+    angie = turtleObjects()
+    angie.speed(2)
     angie.circle(100)
 
-drawScreen()
+    #turtle makes a triangle
+    desmond = turtleObjects()
+    desmond.triangle()
+
+drawTurtles()
