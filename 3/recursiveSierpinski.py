@@ -9,16 +9,18 @@ def drawTurtles():
     startLocation = brad.position()
     xlocation = startLocation[0]
     ylocation = startLocation[1]
-    drawTriangle(brad,100,5,xlocation,ylocation)
+    drawTriangle(brad,100,3,xlocation,ylocation)
     window.exitonclick()
 
 
 
 def drawTriangle(turtle,length,levels,xLocation,yLocation):
+    test = raw_input("level is" + str(levels)+ "length is "+ str(length))
     if levels == 0:
         return
     else:
         turtle.setposition(xLocation,yLocation)
+        length = float(length/2)
         turtle.pendown()
         levels = levels - 1
         point1 = turtle.position()
@@ -37,8 +39,8 @@ def drawTriangle(turtle,length,levels,xLocation,yLocation):
         turtle.forward(100)
         turtle.penup()
         turtle.setheading(90)
-        drawTriangle(turtle,float(length/2),levels,x1location/2,y1location/2)
-        drawTriangle(turtle,float(length/2),levels,x2location/2,y2location/2)
-        drawTriangle(turtle,float(length/2),levels,x3location/2,y3location/2)
+        drawTriangle(turtle,length,levels,x1location/2,y1location/2)
+        drawTriangle(turtle,length,levels,x2location/2,y2location/2)
+        drawTriangle(turtle,length,levels,x3location/2,y3location/2)
 
 drawTurtles()
